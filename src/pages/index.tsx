@@ -6,18 +6,22 @@ import PostPreview from "../components/post-preview"
 
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <PostPreview
-          title={node.frontmatter.title}
-          link={node.fields.slug}
-          excerpt={node.excerpt}
-          date={node.frontmatter.date}
-          readTime={node.timeToRead}
-        />
-      ))}
+      {data.allMarkdownRemark.edges.map(({ node }, i) => {
+        console.log("key", i)
+
+        return (
+          < PostPreview key={i}
+            title={node.frontmatter.title}
+            link={node.fields.slug}
+            excerpt={node.excerpt}
+            date={node.frontmatter.date}
+            readTime={node.timeToRead}
+          />
+        )
+      }
+      )}
     </Layout>
   )
 }

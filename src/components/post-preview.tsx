@@ -12,7 +12,6 @@ type PostPreviewProps = {
 }
 
 export default (props: PostPreviewProps) => {
-    console.log(props.readTime)
     return (
         <div>
             <Link to={props.link}><h1>{props.title}</h1></Link>

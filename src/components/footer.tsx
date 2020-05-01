@@ -24,17 +24,17 @@ export default () => {
     let socials = data.site.siteMetadata.socials
     let i = 0;
     let items = []
-    socials.map((social: any) => {
+    socials.map((social: any, i: number) => {
         i++
         if (i < socials.length) {
             items.push(
-                <div>
+                <div key={i}>
                     <a href={social.url}>{social.name}</a>•
                 </div>
             )
         } else {
             items.push(
-                <div>
+                <div key={i}>
                     <a href={social.url}>{social.name}</a>
                 </div>
             )
