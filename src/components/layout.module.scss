@@ -1,0 +1,46 @@
+// Layout
+.layout {
+}
+.pageContainer {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 42rem;
+    padding-left: 1.3125rem;
+    padding-right: 1.3125rem;
+    padding-bottom: 0;
+}
+
+.contentWrap {
+    padding-bottom: 2.5rem;
+}
+
+// Header
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.625rem;
+}
+
+.title {
+    flex: 1;
+}
+
+.pageLink {
+    padding-left: 0.75rem;
+}
+
+// Footer
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.right {
+    flex: 1;
+    text-align: right;
+}

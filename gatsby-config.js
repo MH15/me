@@ -6,5 +6,42 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Matt Hall`,
+    siteUrl: `https://matthall.ml`,
+    description: `A devlog.`,
+    socials: [
+      {
+        url: `https://github.com/mh15`,
+        name: `Github`
+      },
+      {
+        url: `https://instagram.com/matthallosu`,
+        name: `Instagram`
+      },
+      {
+        url: `mailto:matthew349hall@hotmail.com`,
+        name: `Email`
+      }
+    ]
+  },
+  plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    `gatsby-transformer-remark`
+  ],
 }
