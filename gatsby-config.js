@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Matt Hall`,
+    title: `matt hall`,
     siteUrl: `https://matthall.ml`,
     description: `A devlog.`,
     socials: [
@@ -42,6 +42,16 @@ module.exports = {
         path: `${__dirname}/content/posts`,
       },
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+        ],
+      },
+    },
   ],
 }
