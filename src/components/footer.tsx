@@ -29,13 +29,13 @@ export default () => {
         if (i < socials.length) {
             items.push(
                 <div key={i}>
-                    <a href={social.url}>{social.name}</a>•
+                    <a key={i} href={social.url}>{social.name}</a>&nbsp;•&nbsp;
                 </div>
             )
         } else {
             items.push(
                 <div key={i}>
-                    <a href={social.url}>{social.name}</a>
+                    <a key={i} href={social.url}>{social.name}</a>
                 </div>
             )
 
@@ -45,12 +45,16 @@ export default () => {
     })
     // separate each social link with a dot •
     return (
-        <div className={footerStyles.footer}>
-            {items}
-            <div className={footerStyles.right}>
-                <a href="/rss">rss</a>
+        <footer className={footerStyles.footer}>
+            <div className={footerStyles.footerInner}>
+                {/* <div className={footerStyles.left}> */}
+                {items}
+                {/* </div> */}
+                <siv className={footerStyles.right}>
+                    <a href="/rss">rss</a>
+                </siv>
             </div>
-        </div>
+        </footer>
     )
 }
 

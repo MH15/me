@@ -22,6 +22,11 @@ a:visited {
   text-decoration: none;
 }
 
+p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
 body,
 html {
   margin: 0;
@@ -36,4 +41,9 @@ html {
   pre {
     border-radius: $code-radius;
   }
+}
+
+* {
+  box-sizing: border-box;
+  // border: 1px solid rgba(1, 0, 0, 0.5);
 }
