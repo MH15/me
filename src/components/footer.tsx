@@ -50,9 +50,9 @@ export default () => {
                 {/* <div className={footerStyles.left}> */}
                 {items}
                 {/* </div> */}
-                <siv className={footerStyles.right}>
+                <div className={footerStyles.right}>
                     <a href="/rss">rss</a>
-                </siv>
+                </div>
             </div>
         </footer>
     )

@@ -1,6 +1,6 @@
 ---
 title: Game Design in Typescript
-date: "2020-05-03"
+date: "2020-05-08"
 ---
 
 Designing a game engine in Typescript using PixiJS.

@@ -9,17 +9,18 @@ export default ({ data }) => {
   return (
     <Layout>
       {data.allMarkdownRemark.edges.map(({ node }, i) => {
-        console.log("key", i)
 
-        return (
-          < PostPreview key={i}
-            title={node.frontmatter.title}
-            link={node.fields.slug}
-            excerpt={node.excerpt}
-            date={node.frontmatter.date}
-            readTime={node.timeToRead}
-          />
-        )
+        if (node.fields.slug != "/about-content/") {
+          return (
+            < PostPreview key={i}
+              title={node.frontmatter.title}
+              link={node.fields.slug}
+              excerpt={node.excerpt}
+              date={node.frontmatter.date}
+              readTime={node.timeToRead}
+            />
+          )
+        }
       }
       )}
     </Layout>
@@ -44,7 +45,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
           }
-          excerpt
+          excerpt(pruneLength: 300)
           timeToRead
         }
       }

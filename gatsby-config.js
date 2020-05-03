@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `matt hall`,
+    bio: `A devlog.`,
     siteUrl: `https://matthall.ml`,
     description: `A devlog.`,
     socials: [
@@ -28,6 +29,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,6 +45,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -50,7 +59,9 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {},
           },
+          "gatsby-remark-component"
         ],
+
       },
     },
   ],

@@ -22,6 +22,11 @@ a:visited {
   text-decoration: none;
 }
 
+h3 {
+  color: $gray;
+  font-weight: 600;
+}
+
 p {
   font-size: 16px;
   line-height: 28px;
@@ -46,4 +51,11 @@ html {
 * {
   box-sizing: border-box;
   // border: 1px solid rgba(1, 0, 0, 0.5);
+}
+
+.active {
+  color: $light-blue !important;
+  h3 {
+    color: $light-blue !important;
+  }
 }

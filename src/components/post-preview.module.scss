@@ -1,0 +1,25 @@
+.preview {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.content {
+    flex: 1;
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+$image-size: 200px;
+
+.imgPreview {
+    background-image: url("https://source.unsplash.com/random/500x500");
+    background-position: center;
+    background-size: cover;
+    width: $image-size;
+    height: $image-size;
+    float: right;
+    margin-left: 1rem;
+    border-radius: 8px;
+}

@@ -1,6 +1,6 @@
 ---
 title: Mazes
-date: 2020-05-01 11:00:28
+date: 2020-05-21 11:00:28
 ---
 
 Various algorithms for mazes.
