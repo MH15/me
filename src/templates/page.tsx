@@ -4,10 +4,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default ({ children }) => {
+export default (props) => {
     return (
-        <Layout>
-            {children}
+        <Layout title={props.title}>
+            {props.children}
         </Layout>
     )
 }

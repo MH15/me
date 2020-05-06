@@ -2,7 +2,7 @@ import React from "react"
 import Page from "../templates/page"
 import Experience from "../components/experience"
 export default () => (
-    <Page>
+    <Page title="Work">
         <Experience
             title="Blubrry Podcasting"
             dates="Summer 2019"

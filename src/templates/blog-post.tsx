@@ -9,7 +9,7 @@ export default ({ data, pageContext }: any) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
   return (
-    <Layout>
+    <Layout title={post.frontmatter.title}>
       {/* <article className={styles.article}> */}
       <div>
         <h1>{post.frontmatter.title}</h1>

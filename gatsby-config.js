@@ -7,10 +7,13 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `matt hall`,
+    title: `Matt Hall`,
+    titleTemplate: `%s · Matt Hall`,
+    description: `A devlog.`,
+    url: `https://matthall.codes`,
     bio: `A devlog.`,
     siteUrl: `https://matthall.ml`,
-    description: `A devlog.`,
+    twitterUsername: "@matthallosu",
     socials: [
       {
         url: `https://github.com/mh15`,
@@ -30,6 +33,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

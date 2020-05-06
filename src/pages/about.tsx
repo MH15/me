@@ -10,21 +10,21 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 
 export default ({ data }: any) => {
-    return (
-        <Layout>
-            <div className={styles.main}>
+  return (
+    <Layout title="About">
+      <div className={styles.main}>
 
-                <div className={styles.article} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div className={styles.article} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
 
-                {/* <div className={styles.sidebar}>
+        {/* <div className={styles.sidebar}>
                     <Stats />
                 </div> */}
 
 
-            </div>
-        </Layout>
-    )
+      </div>
+    </Layout>
+  )
 }
 
 
