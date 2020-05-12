@@ -1,6 +1,7 @@
 ---
 title: Mazes
 date: 2020-05-21 11:00:28
+hidden: true
 ---
 
 Various algorithms for mazes.

@@ -32,13 +32,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
         path: `${__dirname}/content/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallery`,
+        path: `${__dirname}/content/gallery`,
       },
     },
     {

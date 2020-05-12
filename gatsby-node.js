@@ -11,7 +11,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 		})
 		// let fixedSlug = slug.split(path.sep)
 		let parent = getNode(node.parent)
-		console.log(parent)
 		createNodeField({
 			node,
 			name: `slug`,
@@ -30,11 +29,12 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
-						}	
-						frontmatter {
-							title
-						}
-						id
+			}	
+			frontmatter {
+				title
+				hidden
+			}
+			id
           }
         }
       }
@@ -43,21 +43,24 @@ exports.createPages = async ({ graphql, actions }) => {
 	// Create blog posts pages.
 	const posts = result.data.allMarkdownRemark.edges
 
+
 	posts.forEach((post, index) => {
-		const previous = index === posts.length - 1 ? null : posts[index + 1].node
-		const next = index === 0 ? null : posts[index - 1].node
-		if (post.node.fields.slug != "/about-content/") {
-			createPage({
-				path: post.node.fields.slug,
-				component: path.resolve(`./src/templates/blog-post.tsx`),
-				context: {
-					// Data passed to context is available
-					// in page queries as GraphQL variables.
-					slug: post.node.fields.slug,
-					previous,
-					next,
-				},
-			})
+		if (post.node.frontmatter && !post.node.frontmatter.hidden) {
+			const previous = index === posts.length - 1 ? null : posts[index + 1].node
+			const next = index === 0 ? null : posts[index - 1].node
+			if (post.node.fields.slug != "/about-content/") {
+				createPage({
+					path: post.node.fields.slug,
+					component: path.resolve(`./src/templates/blog-post.tsx`),
+					context: {
+						// Data passed to context is available
+						// in page queries as GraphQL variables.
+						slug: post.node.fields.slug,
+						previous,
+						next,
+					},
+				})
+			}
 		}
 
 	})

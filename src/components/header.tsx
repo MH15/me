@@ -25,7 +25,7 @@ export default ({ children, ...props }: any) => {
                 <h1>hall</h1>
             </Link>
             <FancyLink to="/about" className={headerStyles.pageLink}><h3>about</h3></FancyLink>
-            <FancyLink to="/photos" className={headerStyles.pageLink}><h3>photos</h3></FancyLink>
+            {/* <FancyLink to="/photos" className={headerStyles.pageLink}><h3>photos</h3></FancyLink> */}
             <FancyLink to="/work" className={headerStyles.pageLink}><h3>work</h3></FancyLink>
         </div>
     )

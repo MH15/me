@@ -22,8 +22,6 @@ const SEO = ({ title, description, /*image,*/ article }) => {
         url: `${siteUrl}${pathname}`,
     }
     if (title) {
-        console.log("title", title)
-        console.log("defaultTitle", defaultTitle)
         return (
             <Helmet title={seo.title} titleTemplate={titleTemplate}>
                 <meta name="description" content={seo.description} />
