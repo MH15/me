@@ -1,0 +1,31 @@
+
+https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0
+https://immersive-web.github.io/webxr-samples/ - does not work on Firefox or in iOS
+https://github.com/AR-js-org/AR.js - garbage demo, works in Firefox. Lots of cool ideas for video textures using ThreeJS
+
+https://en.wikipedia.org/wiki/Augmented_Reality_Markup_Language
+
+
+https://www.html5rocks.com/en/tutorials/webgl/jsartoolkit_webrtc/ - apparently this all worked in 2012 what are we waiting for lol
+http://www.hitl.washington.edu/artoolkit/ - the origins of this project
+
+how AR works - http://www.hitl.washington.edu/artoolkit/documentation/userarwork.htm
+
+
+# How Augmented Reality Works
+
+## Theory
+
+
+
+
+## Practice
+Hardware Requirements-
+- Accelerometer
+- Camera
+
+
+
+## Implementation
+
+

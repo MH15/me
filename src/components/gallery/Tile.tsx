@@ -1,9 +1,9 @@
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 
-const Tile = styled.div`
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-`;
+// const Tile = styled.div`
+//   position: relative;
+//   cursor: pointer;
+//   overflow: hidden;
+// `;
 
-export default Tile;
+// export default Tile;

@@ -68,13 +68,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
           },
-          "gatsby-remark-component"
         ],
-
       },
-    },
+    }
   ],
 }

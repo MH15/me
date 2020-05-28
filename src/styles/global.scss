@@ -22,6 +22,11 @@ a:visited {
   text-decoration: none;
 }
 
+h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+
 h3 {
   color: $gray;
   font-weight: 600;
@@ -30,6 +35,7 @@ h3 {
 p {
   font-size: 16px;
   line-height: 28px;
+  margin-top: 0.8rem;
 }
 
 li {
@@ -63,4 +69,8 @@ html {
   h3 {
     color: $light-blue !important;
   }
+}
+
+img {
+  box-shadow: none !important;
 }
